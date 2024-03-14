@@ -7,9 +7,8 @@ import { getPokemon } from "./DataServices/DataService";
 import pokemon from "./Interfaces/Interface";
 
 function App() {
-
-  const [pokemonFetch, setPokemonFetch] = useState<pokemon>();
-
+  const [pokemonFetch, setPokemonFetch] = useState<pokemon>({}as pokemon);
+//  const [count, setCount] = useState<number>("bob")
 useEffect(() => {
   const getData = async () => {
     const fetechedData = await getPokemon();
@@ -19,7 +18,10 @@ useEffect(() => {
   }
   getData();
 },[])
-console.log(pokemonFetch?.abilities)
+console.log(pokemonFetch)
+console.log(pokemonFetch.abilities)
+console.log(pokemonFetch.name)
+console.log(pokemonFetch.id)
   return (
     <div className="bg-main bg-no-repeat bg-cover bg-center bg-fixed h-screen">
 <NavTitleComponent />

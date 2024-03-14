@@ -49,7 +49,18 @@ const NavTitleComponent = () => {
           Favorites
         </button>
 
-        {/* drawer component */}
+        
+
+      <div className="flex justify-center lg:hidden">
+        <input
+          id="pkmnInput2"
+          className="w-8/12 my-8 border-black border-4 text-center"
+          type="text"
+          placeholder="Pokemon name/number"
+        />
+      </div>
+      
+      {/* drawer component */}
         <React.Fragment>
           <Drawer
             placeholder={undefined}
@@ -106,15 +117,6 @@ const NavTitleComponent = () => {
             </div>
           </Drawer>
         </React.Fragment>
-      </div>
-
-      <div className="flex justify-center lg:hidden">
-        <input
-          id="pkmnInput2"
-          className="w-8/12 my-8 border-black border-4 text-center"
-          type="text"
-          placeholder="Pokemon name/number"
-        />
       </div>
     </div>
   );
