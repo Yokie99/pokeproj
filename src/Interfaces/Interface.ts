@@ -1,3 +1,8 @@
 type pokemon = {
-    abilties : string[];
+    name: string;
+    id: number;
+    types: string[];
+    abilities: string[];
+    img: string;
 }
+export default pokemon; 
