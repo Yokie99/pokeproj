@@ -1,0 +1,3 @@
+type pokemon = {
+    abilties : string[];
+}
