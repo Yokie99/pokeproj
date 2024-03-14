@@ -4,10 +4,10 @@ import NavTitleComponent from "./Components/NavTitleComponent";
 import LeftColumnComponent from "./Components/LeftColumnComponent";
 import RightColumnComponent from "./Components/RightColumnComponent";
 import { getPokemon } from "./DataServices/DataService";
-import pokemon from "./Interfaces/Interface";
+import Ipokemon from "./Interfaces/Interface";
 
 function App() {
-  const [pokemonFetch, setPokemonFetch] = useState<pokemon>({}as pokemon);
+  const [pokemonFetch, setPokemonFetch] = useState<Ipokemon>();
 //  const [count, setCount] = useState<number>("bob")
 useEffect(() => {
   const getData = async () => {
@@ -17,11 +17,16 @@ useEffect(() => {
     
   }
   getData();
+ 
 },[])
-console.log(pokemonFetch)
-console.log(pokemonFetch.abilities)
-console.log(pokemonFetch.name)
-console.log(pokemonFetch.id)
+// console.log(pokemonFetch?.sprites)
+console.log(pokemonFetch?.types[0].type.name)
+// console.log(pokemonFetch?.moves[0])
+
+// console.log(pokemonFetch?.sprites.other["official-artwork"].front_default)
+// console.log(pokemonFetch?.abilities)
+// console.log(pokemonFetch?.name)
+// console.log(pokemonFetch?.id)
   return (
     <div className="bg-main bg-no-repeat bg-cover bg-center bg-fixed h-screen">
 <NavTitleComponent />
