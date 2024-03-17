@@ -1,10 +1,11 @@
-type Ipokemon = {
-    name: number,
+export type Ipokemon = {
+    name: string,
     id: number,
-    abilities: string[],
-    moves: string[],
+    abilities: Ability[],
+    moves: Moves[],
     sprites: Sprites;
     types: PokemonTypes[],
+    location_area_encounters: string,
 }
 
 interface Sprites {
@@ -15,9 +16,20 @@ interface Sprites {
         };
     }
 }
-
 interface PokemonTypes {
     type: {name:string};
 }
 
-export default Ipokemon; 
+interface Moves{
+    move: {name:string};
+}
+
+interface Ability{
+    ability: {name:string}
+}
+
+export type ILocationFetch={
+location_area: {name:string}
+}
+
+

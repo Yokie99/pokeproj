@@ -1,4 +1,5 @@
 import React from 'react'
+import star from '../assets/Star_Vector.png'
 
 const LeftColumnComponent = () => {
   return (
@@ -7,7 +8,7 @@ const LeftColumnComponent = () => {
         <div className="flex justify-center items-center">
           <p id="monName" className="text-white text-4xl lg:text-5xl textShadow"></p>
           <button id="shinyBtn" type="button" className="text-white bg-gradient-to-r from-yellow-200 via-orange-400 to-yellow-300 hover:bg-gradient-to-bl focus:ring-4 rounded-lg  px-4 lg:px-16 py-2.5 mx-3 text-sm lg:text-lg">Shiny</button>
-          <img id="favStar" className="" src="/assets/Star_Vector.png" alt="outline of a star" />
+          <img id="favStar" className="" src={star} alt="outline of a star" />
         </div>
 
         <div className="flex justify-center items-center">
