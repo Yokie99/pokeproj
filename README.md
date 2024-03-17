@@ -22,8 +22,9 @@ Fully Responsive using Tailwind CSS https://tailwindcss.com
 Have a Prototype in Figma (Desktop, Tablet, Mobile)
 
 
-Peer Reviewer: 
-Review: 
+Peer Reviewer: Joseph Poncini 
+Review: Looks like a good effort but there are some features that are missing from your project. Local storage is not implemented so favorites are not able to be saved. Evolution lines do not have a name and they do not have onClick functions either. The evolution lines also do not have the lines that point to there next evolution. The webpage has a weird white space on the top also. 
+The parts that you did finish look good. Finish this up later when you have time to figure everything out without a assignment deadline 
 
 
 
