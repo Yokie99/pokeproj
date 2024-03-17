@@ -5,6 +5,7 @@ interface RightColumnComponentProps{
   abilities: string[]
   types: string[]
   location: string
+  desc: string
 }
 
 const RightColumnComponent = (props:RightColumnComponentProps) => {
@@ -16,7 +17,7 @@ const RightColumnComponent = (props:RightColumnComponentProps) => {
         </div>
         <div className="flex w-full textShadow my-10 ">
           <p className="w-[25%] text-2xl lg:text-3xl break-words">Description: </p>
-          <p id="monDesc" className="w-[75%] text-2xl lg:text-3xl"></p>
+          <p id="monDesc" className="w-[75%] text-2xl lg:text-3xl">{props.desc}</p>
         </div>
         <div className="flex w-full textShadow my-10">
           <p className="w-[25%] text-2xl lg:text-3xl break-words">Location:</p>

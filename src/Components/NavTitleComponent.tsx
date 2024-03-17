@@ -6,7 +6,15 @@ import {
   IconButton,
 } from "@material-tailwind/react/";
 
-const NavTitleComponent = () => {
+interface NavTitleComponentProps{
+  onChange: React.Dispatch<React.SetStateAction<string>>
+  newValue: () => void
+  getRand: () => void
+  
+}
+
+
+const NavTitleComponent = (props:NavTitleComponentProps) => {
   const [open, setOpen] = React.useState(false);
 
   const openDrawer = () => setOpen(true);
@@ -24,12 +32,14 @@ const NavTitleComponent = () => {
           className="w-4/12 border-black border-4 text-center hidden lg:block"
           type="text"
           placeholder="Pokemon name/number"
+          onChange={(e)=> props.onChange(e.target.value)}
         />
 
         <button
           id="searchBtn"
           type="button"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-4 lg:px-16 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mx-3 text-sm lg:text-lg"
+          onClick={props.newValue}
         >
           Search
         </button>
@@ -38,6 +48,7 @@ const NavTitleComponent = () => {
           id="randomBtn"
           type="button"
           className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg  px-4 lg:px-16 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800 mx-3 text-sm lg:text-lg"
+          onClick={props.getRand}
         >
           Random
         </button>
