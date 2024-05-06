@@ -169,9 +169,9 @@ function App() {
   //  setmovesArray(movesData);
 
   return (
-    <div className="bg-main bg-no-repeat bg-cover bg-center bg-fixed h-300vh">
+    <div className="bg-main bg-no-repeat bg-cover bg-center bg-fixed min-h-screen">
       <NavTitleComponent onChange={setSearchName} newValue={searchBtn} getRand={randomPkmn} />
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:mt-20">
         <div>
           <LeftColumnComponent name={name} id={id} image={image} evos={evoURLS} evoNames={evoNames} shiny={changeShiny}/>
         </div>

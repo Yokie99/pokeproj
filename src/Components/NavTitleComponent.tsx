@@ -22,7 +22,7 @@ const NavTitleComponent = (props:NavTitleComponentProps) => {
 
   return (
     <div>
-      <h1 className="my-12 text-center text-6xl lg:text-8xl text-white textShadow">
+      <h1 className="py-12 text-center text-6xl lg:text-8xl text-white textShadow">
         PokéDex
       </h1>
 
